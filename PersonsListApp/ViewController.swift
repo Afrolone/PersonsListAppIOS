@@ -12,6 +12,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let data = DataLoader().personsData
+        
+        print("something!")
+        for person in data {
+            print(person.firstName)
+        }
     }
 
 

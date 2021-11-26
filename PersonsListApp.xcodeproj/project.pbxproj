@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E990AC8D27511BC800B116AF /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E990AC8C27511BC800B116AF /* Kingfisher */; };
+		E990AC8F27511C4F00B116AF /* PersonsData.json in Resources */ = {isa = PBXBuildFile; fileRef = E990AC8E27511C4F00B116AF /* PersonsData.json */; };
+		E990AC9127511CE600B116AF /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E990AC9027511CE600B116AF /* Person.swift */; };
+		E990AC932751298200B116AF /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E990AC922751298200B116AF /* DataLoader.swift */; };
 		E9F20B6A2750EECF00CC948E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F20B692750EECF00CC948E /* AppDelegate.swift */; };
 		E9F20B6C2750EECF00CC948E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F20B6B2750EECF00CC948E /* SceneDelegate.swift */; };
 		E9F20B6E2750EECF00CC948E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F20B6D2750EECF00CC948E /* ViewController.swift */; };
@@ -16,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E990AC8E27511C4F00B116AF /* PersonsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PersonsData.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
+		E990AC9027511CE600B116AF /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		E990AC922751298200B116AF /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		E9F20B662750EECF00CC948E /* PersonsListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonsListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F20B692750EECF00CC948E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9F20B6B2750EECF00CC948E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E990AC8D27511BC800B116AF /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,10 +67,13 @@
 				E9F20B692750EECF00CC948E /* AppDelegate.swift */,
 				E9F20B6B2750EECF00CC948E /* SceneDelegate.swift */,
 				E9F20B6D2750EECF00CC948E /* ViewController.swift */,
+				E990AC9027511CE600B116AF /* Person.swift */,
 				E9F20B6F2750EECF00CC948E /* Main.storyboard */,
 				E9F20B722750EED300CC948E /* Assets.xcassets */,
 				E9F20B742750EED300CC948E /* LaunchScreen.storyboard */,
 				E9F20B772750EED300CC948E /* Info.plist */,
+				E990AC8E27511C4F00B116AF /* PersonsData.json */,
+				E990AC922751298200B116AF /* DataLoader.swift */,
 			);
 			path = PersonsListApp;
 			sourceTree = "<group>";
@@ -83,6 +94,9 @@
 			dependencies = (
 			);
 			name = PersonsListApp;
+			packageProductDependencies = (
+				E990AC8C27511BC800B116AF /* Kingfisher */,
+			);
 			productName = PersonsListApp;
 			productReference = E9F20B662750EECF00CC948E /* PersonsListApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = E9F20B5D2750EECF00CC948E;
+			packageReferences = (
+				E990AC8B27511BC800B116AF /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = E9F20B672750EECF00CC948E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +142,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E990AC8F27511C4F00B116AF /* PersonsData.json in Resources */,
 				E9F20B762750EED300CC948E /* LaunchScreen.storyboard in Resources */,
 				E9F20B732750EED300CC948E /* Assets.xcassets in Resources */,
 				E9F20B712750EECF00CC948E /* Main.storyboard in Resources */,
@@ -138,8 +156,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E990AC932751298200B116AF /* DataLoader.swift in Sources */,
 				E9F20B6E2750EECF00CC948E /* ViewController.swift in Sources */,
 				E9F20B6A2750EECF00CC948E /* AppDelegate.swift in Sources */,
+				E990AC9127511CE600B116AF /* Person.swift in Sources */,
 				E9F20B6C2750EECF00CC948E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +378,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E990AC8B27511BC800B116AF /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E990AC8C27511BC800B116AF /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E990AC8B27511BC800B116AF /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E9F20B5E2750EECF00CC948E /* Project object */;
 }
