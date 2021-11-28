@@ -44,11 +44,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let person = data[indexPath.row]
-        
-//        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: Constants.Storyboard.movieDetailViewController) as! MovieDetailViewController
-//        vc.movie = movie
-//        navigationController?.pushViewController(vc, animated: true)
+        _ = data[indexPath.row]
     }
 
 }

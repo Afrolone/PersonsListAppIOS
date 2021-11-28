@@ -24,11 +24,18 @@ class PersonTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        setMainCellView()
+        setAvatarListener()
+    }
+    
+    fileprivate func setMainCellView() {
         // Initialization code
         mainCellView.layer.borderColor = UIColor.black.cgColor
         mainCellView.layer.borderWidth = 1.0
         mainCellView.layer.cornerRadius = 10
-        
+    }
+    
+    fileprivate func setAvatarListener() {
         let singleTap = UITapGestureRecognizer(target: self, action: #selector(tapDetected))
         avatar.isUserInteractionEnabled = true
         avatar.addGestureRecognizer(singleTap)
@@ -36,16 +43,10 @@ class PersonTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     @objc func tapDetected() {
         print("Imageview Clicked")
-//        let movie = MoviesCollection.movies[indexPath.row]
-//        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: Constants.Storyboard.movieDetailViewController) as! MovieDetailViewController
-//        vc.movie = movie
-//        navigationController?.pushViewController(vc, animated: true)
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         vc.person = person
         navigationController?.pushViewController(vc, animated: true)
@@ -54,6 +55,7 @@ class PersonTableViewCell: UITableViewCell {
     
     func setTheCell(_person: Person, navCont: UINavigationController?) {
         person = _person
+        
         navigationController = navCont
         nameLabel.text = person?.firstName
         surnameLabel.text = person?.lastName
@@ -62,7 +64,6 @@ class PersonTableViewCell: UITableViewCell {
         }
         genderLabel.text = person?.gender
         numberLabel.text = person?.number
-        
     
         avatar.kf.setImage(with: person?.avatar)
         avatar.layer.masksToBounds = false
