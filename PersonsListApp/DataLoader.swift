@@ -8,7 +8,7 @@
 import Foundation
 
 public class DataLoader {
-    @Published var personsData = [Person]()
+    var personsData = [Person]()
     
     init() {
         load()

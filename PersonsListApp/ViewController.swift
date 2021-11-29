@@ -23,11 +23,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.register(nib, forCellReuseIdentifier: "PersonTableViewCell")
         tableView.delegate = self
         tableView.dataSource = self
-        
-        print("something!")
-        for person in data {
-            print(person.firstName)
-        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,13 +33,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "PersonTableViewCell", for: indexPath) as? PersonTableViewCell
         else { fatalError("Could not create PersonCell") }
         let person = data[indexPath.row]
-        cell.setTheCell(_person: person, navCont: navigationController)
+        cell.setTheCell(person: person)
         
+        cell.button.addTarget(self, action: #selector(customCellButtonTapped), for: .touchUpInside)
+                
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         _ = data[indexPath.row]
+    }
+    
+    @objc func customCellButtonTapped(_ sender: UIButton) {
+        let point = sender.convert(CGPoint.zero, to: tableView)
+        guard let indexPath = tableView.indexPathForRow(at: point) else { return }
+        
+        print("idpath")
+        print(indexPath)
+        
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        vc.person = data[indexPath.row];
+        navigationController?.present(vc, animated: true)
     }
 
 }

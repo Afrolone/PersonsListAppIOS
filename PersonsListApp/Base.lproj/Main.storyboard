@@ -54,19 +54,19 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FSN-lc-gzQ">
-                                <rect key="frame" x="0.0" y="458" width="414" height="404"/>
+                                <rect key="frame" x="0.0" y="458" width="414" height="389"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="04S-Hu-hgx">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="202"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="194.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCg-uh-jLx">
-                                                <rect key="frame" x="0.0" y="91" width="207" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="87" width="207" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpB-bp-ZTs">
-                                                <rect key="frame" x="207" y="91" width="207" height="20.5"/>
+                                                <rect key="frame" x="207" y="87" width="207" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -74,22 +74,33 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UjV-dU-gOD">
-                                        <rect key="frame" x="0.0" y="202" width="414" height="202"/>
+                                        <rect key="frame" x="0.0" y="194.5" width="414" height="194.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEX-Zs-Wj0">
+                                <rect key="frame" x="100" y="816" width="214" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Back"/>
+                                <connections>
+                                    <action selector="onBackTapped:" destination="UDB-09-f9y" eventType="touchUpInside" id="93f-Uf-ohd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4VT-EO-IFm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="4VT-EO-IFm" firstAttribute="trailing" secondItem="KNt-qy-7wP" secondAttribute="trailing" id="6ev-ut-FtT"/>
                             <constraint firstItem="KNt-qy-7wP" firstAttribute="top" secondItem="4VT-EO-IFm" secondAttribute="top" id="BSo-gJ-til"/>
+                            <constraint firstItem="4VT-EO-IFm" firstAttribute="bottom" secondItem="vEX-Zs-Wj0" secondAttribute="bottom" constant="15" id="Dp4-wT-X0b"/>
+                            <constraint firstItem="vEX-Zs-Wj0" firstAttribute="leading" secondItem="4VT-EO-IFm" secondAttribute="leading" constant="100" id="FL9-LM-NTh"/>
                             <constraint firstItem="KNt-qy-7wP" firstAttribute="leading" secondItem="4VT-EO-IFm" secondAttribute="leading" id="Fh0-pt-LMa"/>
-                            <constraint firstItem="4VT-EO-IFm" firstAttribute="bottom" secondItem="FSN-lc-gzQ" secondAttribute="bottom" id="ISG-O8-XvY"/>
+                            <constraint firstItem="4VT-EO-IFm" firstAttribute="bottom" secondItem="FSN-lc-gzQ" secondAttribute="bottom" constant="15" id="ISG-O8-XvY"/>
                             <constraint firstItem="FSN-lc-gzQ" firstAttribute="leading" secondItem="4VT-EO-IFm" secondAttribute="leading" id="TZw-Er-heO"/>
+                            <constraint firstItem="4VT-EO-IFm" firstAttribute="trailing" secondItem="vEX-Zs-Wj0" secondAttribute="trailing" constant="100" id="Xwo-Er-mrZ"/>
                             <constraint firstItem="FSN-lc-gzQ" firstAttribute="top" secondItem="KNt-qy-7wP" secondAttribute="bottom" id="auP-Md-S2r"/>
                             <constraint firstItem="4VT-EO-IFm" firstAttribute="trailing" secondItem="FSN-lc-gzQ" secondAttribute="trailing" id="uls-RX-N4K"/>
                         </constraints>
@@ -97,6 +108,7 @@
                     <connections>
                         <outlet property="ageLabel" destination="UjV-dU-gOD" id="uWO-sp-IkG"/>
                         <outlet property="avatar" destination="KNt-qy-7wP" id="a9h-ze-Kot"/>
+                        <outlet property="backButton" destination="vEX-Zs-Wj0" id="a2a-xZ-L4y"/>
                         <outlet property="nameLabel" destination="fCg-uh-jLx" id="kyr-TO-UAs"/>
                         <outlet property="surnameLabel" destination="bpB-bp-ZTs" id="vQv-xi-o9x"/>
                     </connections>

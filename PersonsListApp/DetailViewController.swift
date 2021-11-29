@@ -16,7 +16,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var surnameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
-    
+    @IBOutlet weak var backButton: UIButton!
+
     
     override func viewDidLoad() {
         avatar.kf.setImage(with: person?.avatar)
@@ -26,5 +27,9 @@ class DetailViewController: UIViewController {
             ageLabel.text = "Age: \(age)"
         }
         super.viewDidLoad()
+    }
+    
+    @IBAction func onBackTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
