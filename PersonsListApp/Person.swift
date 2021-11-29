@@ -17,10 +17,10 @@ import Foundation
 //}
 
 class Person: Codable {
-    var firstName: String
-    var lastName: String
-    var gender: String
-    var age: Int
-    var number: String
-    var avatar: URL
+    var firstName: String?
+    var lastName: String?
+    var gender: String?
+    var age: Int?
+    var number: String?
+    var avatar: URL?
 }

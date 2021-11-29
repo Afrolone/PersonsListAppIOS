@@ -20,16 +20,16 @@
        "firstName": "Emily",
        "lastName": "Jones",
        "gender": "female",
-       "age": 24,
-       "number": "456754675",
+       "age": 10,
+       "number": "09874992",
        "avatar": "https://robohash.org/person3.png"
     },
     {
        "firstName": "Emily",
        "lastName": "Jones",
        "gender": "female",
-       "age": 24,
-       "number": "456754675",
+       "age": 44,
+       "number": "76389202",
        "avatar": "https://robohash.org/person4.png"
     },
     {
@@ -37,25 +37,22 @@
        "lastName": "Jones",
        "gender": "female",
        "age": 24,
-       "number": "456754675",
        "avatar": "https://robohash.org/person5.png"
     },
     {
        "firstName": "Emily",
        "lastName": "Jones",
        "gender": "female",
-       "age": 24,
-       "number": "456754675",
+       "age": 14,
+       "number": "9827619",
        "avatar": "https://robohash.org/person6.png"
     },
     {
        "firstName": "Emily",
        "lastName": "Jones",
        "gender": "female",
-       "age": 24,
-       "number": "456754675",
+       "age": 32,
        "avatar": "https://robohash.org/person7.png"
     }
   ]
 }
-
