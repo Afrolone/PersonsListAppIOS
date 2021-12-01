@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E901CF0A2755A6D700201738 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = E901CF092755A6D700201738 /* People.swift */; };
 		E96AE4E12752378D003AC467 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96AE4DF2752378D003AC467 /* PersonTableViewCell.swift */; };
 		E96AE4E22752378D003AC467 /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E96AE4E02752378D003AC467 /* PersonTableViewCell.xib */; };
 		E96AE4E42752DD4A003AC467 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96AE4E32752DD4A003AC467 /* DetailViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E901CF092755A6D700201738 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		E96AE4DF2752378D003AC467 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		E96AE4E02752378D003AC467 /* PersonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
 		E96AE4E32752DD4A003AC467 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				E9F20B742750EED300CC948E /* LaunchScreen.storyboard */,
 				E9F20B772750EED300CC948E /* Info.plist */,
 				E990AC8E27511C4F00B116AF /* PersonsData.json */,
+				E901CF092755A6D700201738 /* People.swift */,
 				E990AC922751298200B116AF /* DataLoader.swift */,
 			);
 			path = PersonsListApp;
@@ -170,6 +173,7 @@
 				E990AC932751298200B116AF /* DataLoader.swift in Sources */,
 				E9F20B6E2750EECF00CC948E /* ViewController.swift in Sources */,
 				E9F20B6A2750EECF00CC948E /* AppDelegate.swift in Sources */,
+				E901CF0A2755A6D700201738 /* People.swift in Sources */,
 				E990AC9127511CE600B116AF /* Person.swift in Sources */,
 				E9F20B6C2750EECF00CC948E /* SceneDelegate.swift in Sources */,
 				E96AE4E42752DD4A003AC467 /* DetailViewController.swift in Sources */,

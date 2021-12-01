@@ -17,19 +17,12 @@ public class DataLoader {
     func load() {
         if let fileLocation = Bundle.main.url(forResource: "PersonsData", withExtension: "json") {
             do {
-                var data = try Data(contentsOf: fileLocation)
+                let data = try Data(contentsOf: fileLocation)
                 let jsonDecoder = JSONDecoder()
-                let json = try JSONSerialization.jsonObject(with: data, options: [])
-                let object = json as? [String: Any]
-                
-                let arr1 = object!["people"] as! NSArray
-
-                let objCArray = NSMutableArray(array: arr1)
-                
-                data = try JSONSerialization.data(withJSONObject: objCArray)
-                let dataFromJson = try jsonDecoder.decode([Person].self, from: data)
-                
-                self.personsData = dataFromJson
+                if let json = try? jsonDecoder.decode(People.self, from: data) {
+                       let object = json.people
+                    self.personsData = object
+                   }
             } catch {
                 print(error)
             }
