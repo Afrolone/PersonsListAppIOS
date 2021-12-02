@@ -18,7 +18,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view.
         data = DataLoader().personsData
         
-        
         let nib = UINib(nibName: "PersonTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "PersonTableViewCell")
         tableView.delegate = self
@@ -35,7 +34,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let person = data[indexPath.row]
         cell.setTheCell(person: person)
         
-        cell.button.addTarget(self, action: #selector(customCellButtonTapped), for: .touchUpInside)
+        let tapGR = UITapGestureRecognizer(target: self, action: #selector(self.customCellButtonTapped))
+        
+        cell.avatar.addGestureRecognizer(tapGR)
+        cell.avatar.isUserInteractionEnabled = true
                 
         return cell
     }
@@ -44,16 +46,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         _ = data[indexPath.row]
     }
     
-    @objc func customCellButtonTapped(_ sender: UIButton) {
-        let point = sender.convert(CGPoint.zero, to: tableView)
-        guard let indexPath = tableView.indexPathForRow(at: point) else { return }
+    @objc func customCellButtonTapped(_ sender: UITapGestureRecognizer) {
         
-        print("idpath")
-        print(indexPath)
+        if sender.state == .ended {
+            let touch = sender.location(in: tableView)
+            if let indexPath = tableView.indexPathForRow(at: touch) {
+                
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+                vc.person = data[indexPath.row]
+                navigationController?.present(vc, animated: true)
+            }
+            
+        }
         
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-        vc.person = data[indexPath.row];
-        navigationController?.present(vc, animated: true)
     }
 
 }

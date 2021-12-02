@@ -19,20 +19,10 @@ class PersonTableViewCell: UITableViewCell {
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
-    @IBOutlet weak var button: UIButton!
-    @IBOutlet weak var buttonView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         setMainCellView()
-        setTheButton()
-    }
-    
-    private func setTheButton() {
-        button.layer.cornerRadius = button.bounds.size.width/2
-        button.clipsToBounds = true
-        buttonView.layer.cornerRadius = buttonView.bounds.size.width/2
-        buttonView.clipsToBounds = true
     }
     
     func setMainCellView() {
@@ -68,7 +58,7 @@ class PersonTableViewCell: UITableViewCell {
     }
 }
 
-extension UIButton {
+extension UIImageView {
     private var touchPath: UIBezierPath {return UIBezierPath(ovalIn: self.bounds)}
     open override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
         return touchPath.contains(point)
